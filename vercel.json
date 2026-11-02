@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "/assets/Forest_Red_Ibarrientos_Resume.pdf",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=Forest_Red_Ibarrientos_Resume.pdf"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        }
+      ]
+    }
+  ]
+}
