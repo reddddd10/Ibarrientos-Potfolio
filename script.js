@@ -54,6 +54,19 @@ if ("ResizeObserver" in window) {
 document.fonts?.ready.then(updateBadgeTitleOverflow);
 updateBadgeTitleOverflow();
 
+const resumeDownload = document.querySelector("#resume-download");
+resumeDownload?.addEventListener("click", async (event) => {
+  event.preventDefault();
+  const response = await fetch(resumeDownload.href);
+  const resumeBlob = await response.blob();
+  const blobUrl = URL.createObjectURL(resumeBlob);
+  const downloadLink = document.createElement("a");
+  downloadLink.href = blobUrl;
+  downloadLink.download = "Forest_Red_Ibarrientos_Resume.pdf";
+  downloadLink.click();
+  URL.revokeObjectURL(blobUrl);
+});
+
 const revealTargets = document.querySelectorAll(
   ".hero > *, .internship-details > *, .interest-list, .section-heading, .about-grid > *, .project, .timeline-item, .credential-feature, .credential-tracklist, .footer-inner"
 );
