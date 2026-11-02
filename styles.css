@@ -35,10 +35,10 @@ h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 690px; margin-bottom: 24px; font-family: var(--serif); font-size: clamp(56px, 7.6vw, 96px); font-weight: 600; letter-spacing: 0; line-height: .99; }
 h1 span { color: var(--red); font-style: normal; }
 .hero-copy { max-width: 470px; margin-bottom: 28px; color: var(--muted); font-size: 16px; }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
-.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 12px; padding: 0 18px; background: var(--red); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+.hero-actions { display: flex; flex-wrap: nowrap; align-items: center; gap: 14px; }
+.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 12px; padding: 0 15px; background: var(--red); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background .18s ease, transform .18s ease; }
 .button:hover { transform: translateY(-2px); background: var(--red-dark); }
-.text-link { color: var(--ink); font-size: 13px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.text-link { color: var(--ink); font-size: 13px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 5px; white-space: nowrap; }
 .photo-placeholder { position: relative; display: grid; min-height: 400px; aspect-ratio: 4 / 4.7; place-items: center; overflow: hidden; background: var(--pink); }
 .photo-placeholder::before { position: absolute; content: ""; }
 .photo-placeholder::before { inset: 18px; border: 1px solid rgba(159,33,27,.32); }
@@ -185,11 +185,16 @@ footer { border-top: 1px solid var(--line); }
   .contact { grid-template-columns: 1fr; align-items: start; padding: 70px 0; }
 }
 @media (max-width: 600px) {
+  .hero-actions { gap: 8px; }
+  .hero-actions .button { padding: 0 12px; font-size: 12px; }
   .credential-player { grid-template-columns: 1fr; gap: 32px; }
   .credential-feature { width: min(100%, 340px); margin: 0 auto; }
   .credential-track { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 13px; }
   .track-copy strong { font-size: 17px; }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 17px 0; }
+}
+@media (max-width: 430px) {
+  .hero-actions { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
