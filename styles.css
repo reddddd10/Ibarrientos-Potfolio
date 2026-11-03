@@ -25,8 +25,6 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 .nav-links { display: flex; align-items: center; gap: clamp(16px, 3vw, 34px); }
 .nav-links a { color: #514c47; font-size: 13px; font-weight: 600; text-decoration: none; transition: color .18s ease; }
 .nav-links a:hover { color: var(--red); }
-.nav-links .contact-link { padding: 9px 15px; background: var(--ink); color: white; }
-.nav-links .contact-link:hover { background: var(--red); color: white; }
 
 .hero { min-height: 620px; display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: clamp(38px, 8vw, 100px); padding-top: 72px; padding-bottom: 88px; }
 .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
@@ -159,7 +157,6 @@ footer { border-top: 1px solid var(--line); }
   .nav-links { width: 100%; gap: 19px; overflow-x: auto; padding: 2px 0 4px; scrollbar-width: none; }
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { flex: 0 0 auto; font-size: 11px; }
-  .nav-links .contact-link { padding: 4px 8px; }
   .hero { min-height: 0; grid-template-columns: 1fr; gap: 35px; padding-top: 58px; padding-bottom: 62px; }
   h1 { font-size: clamp(56px, 14vw, 78px); }
   .hero-visual { width: min(100%, 420px); justify-self: center; }
@@ -183,6 +180,9 @@ footer { border-top: 1px solid var(--line); }
   .track-copy small { font-size: 10px; }
   .credential-feature-info h3 { font-size: 24px; }
   .contact { grid-template-columns: 1fr; align-items: start; padding: 70px 0; }
+  .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 17px 0; }
+  .footer-links { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+  .footer-links a { min-width: 0; white-space: nowrap; }
 }
 @media (max-width: 600px) {
   .hero-actions { gap: 8px; }
@@ -191,7 +191,6 @@ footer { border-top: 1px solid var(--line); }
   .credential-feature { width: min(100%, 340px); margin: 0 auto; }
   .credential-track { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 13px; }
   .track-copy strong { font-size: 17px; }
-  .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 17px 0; }
 }
 @media (max-width: 430px) {
   .hero-actions { flex-wrap: wrap; }
