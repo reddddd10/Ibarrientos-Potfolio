@@ -18,7 +18,7 @@ function selectCredential(index) {
   featureName.textContent = track.dataset.name;
   featureImage.src = track.dataset.image;
   featureImage.alt = `${track.dataset.name} badge`;
-  featureArt.classList.toggle("is-round-badge", /(?:pmi-project-management-ready|it-specialist-python)\.png$/.test(track.dataset.image));
+  featureArt.classList.toggle("is-round-badge", /(?:ccst-networking|pmi-project-management-ready|it-specialist-python)\.png$/.test(track.dataset.image));
   featureIssuer.textContent = track.dataset.issuer;
   featureDate.textContent = track.dataset.date;
   featureDate.dateTime = track.dataset.year;
